@@ -37,8 +37,6 @@ COPY ./conf/kubernetes.conf /fluentd/etc/
 COPY ./conf/prometheus.conf /fluentd/etc/
 COPY ./conf/tail_container_parse.conf /fluentd/etc/
 RUN touch /fluentd/etc/disable.conf
-# Add folder for custom configs
-RUN mkdir -p /fluentd/etc/conf.d
 
 # Copy plugins
 COPY plugins /fluentd/plugins/
